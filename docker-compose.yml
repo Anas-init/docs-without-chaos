@@ -1,0 +1,26 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: rdsa-frontend-service
+    ports:
+      - "5173:80"
+    restart: unless-stopped
+    # depends_on:
+    #   - backend
+    environment:
+      - NODE_ENV=production
+    networks:
+      - rdsa-network
+
+  # backend:
+  #   container_name: rdsa-backend-service
+  # kafka:
+  #   container_name: rdsa-kafka-service
+  # redis:
+  #   container_name: rdsa-redis-service
+
+networks:
+  rdsa-network:
+    driver: bridge
