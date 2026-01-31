@@ -3,7 +3,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: rdsa-frontend-service
+    container_name: dwc-frontend-service
     ports:
       - "5173:80"
     restart: unless-stopped
@@ -12,15 +12,15 @@ services:
     environment:
       - NODE_ENV=production
     networks:
-      - rdsa-network
+      - dwc-network
 
   # backend:
-  #   container_name: rdsa-backend-service
+  #   container_name: dwc-backend-service
   # kafka:
-  #   container_name: rdsa-kafka-service
+  #   container_name: dwc-kafka-service
   # redis:
-  #   container_name: rdsa-redis-service
+  #   container_name: dwc-redis-service
 
 networks:
-  rdsa-network:
+  dwc-network:
     driver: bridge
