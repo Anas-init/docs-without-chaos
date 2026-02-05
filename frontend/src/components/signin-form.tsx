@@ -33,13 +33,13 @@ export function SigninForm() {
     console.log(data);
 
     toastSuccess({
-      message: "Logged In",
-      description: "You are successfully logged in to DCW App",
+      message: "Signed In",
+      description: "You are successfully signed in to DCW App",
     });
   }
 
   return (
-    <Card className="border shadow-none w-full sm:max-w-md rounded-none">
+    <Card className="border shadow-none w-full rounded-none">
       <CardHeader>
         <CardTitle className="font-extrabold text-2xl bg-linear-to-r from-blue-400 to-teal-600 bg-clip-text text-transparent md:text-left text-center">
           Account Signin

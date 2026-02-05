@@ -15,7 +15,7 @@ const SignUpPage = () => {
       {/* Main Content */}
       <div className="flex w-full max-w-6xl items-center justify-between gap-12 mt-30 md:mt-0">
         {/* Signin Form Section */}
-        <div className="flex w-full flex-col items-center justify-center md:w-[50%]">
+        <div className="flex w-full flex-col items-center justify-center md:w-[50%] ">
           <SignupForm />
         </div>
 
