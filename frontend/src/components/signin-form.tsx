@@ -47,18 +47,18 @@ export function SigninForm() {
         <CardDescription></CardDescription>
       </CardHeader>
       <CardContent>
-        <form id="Signin-form" onSubmit={form.handleSubmit(onSubmit)}>
+        <form id="signin-form" onSubmit={form.handleSubmit(onSubmit)}>
           <FieldGroup>
             <Controller
               name="email"
               control={form.control}
               render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
-                  <FieldLabel htmlFor="Signin-form-email">Email</FieldLabel>
+                  <FieldLabel htmlFor="signin-form-email">Email</FieldLabel>
                   <Input
                     {...field}
                     type="email"
-                    id="Signin-form-email"
+                    id="signin-form-email"
                     aria-invalid={fieldState.invalid}
                     placeholder="Enter your email"
                     className="rounded-none"
@@ -74,13 +74,13 @@ export function SigninForm() {
               control={form.control}
               render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
-                  <FieldLabel htmlFor="Signin-form-password">
+                  <FieldLabel htmlFor="signin-form-password">
                     Password
                   </FieldLabel>
                   <Input
                     {...field}
                     type="password"
-                    id="Signin-form-password"
+                    id="signin-form-password"
                     aria-invalid={fieldState.invalid}
                     placeholder="Enter your password"
                     className="rounded-none"
@@ -97,7 +97,7 @@ export function SigninForm() {
       <CardFooter className="flex flex-col gap-3 px-6 pb-8 pt-2">
         <Button
           type="submit"
-          form="Signin-form"
+          form="signin-form"
           className="w-full rounded-none h-10 bg-linear-to-r from-blue-400 to-teal-600 text-white hover:from-blue-500 hover:to-teal-700 font-semibold transition-all disabled:opacity-60 shadow-md hover:shadow-lg"
         >
           Sign In
