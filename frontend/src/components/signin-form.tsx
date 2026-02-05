@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { SigninSchema } from "@/zod-validation-schemas/signin-schema";
-import { toastSuccess } from "./custom-toasts";
+import { toastSuccess } from "../lib/custom-toasts";
 
 export function SigninForm() {
   const form = useForm<z.infer<typeof SigninSchema>>({
@@ -41,7 +41,7 @@ export function SigninForm() {
   return (
     <Card className="border shadow-none w-full rounded-none">
       <CardHeader>
-        <CardTitle className="font-extrabold text-2xl bg-linear-to-r from-blue-400 to-teal-600 bg-clip-text text-transparent md:text-left text-center">
+        <CardTitle className="font-extrabold text-2xl color-primary bg-clip-text text-transparent md:text-left text-center">
           Account Signin
         </CardTitle>
         <CardDescription></CardDescription>
@@ -98,7 +98,7 @@ export function SigninForm() {
         <Button
           type="submit"
           form="signin-form"
-          className="w-full rounded-none h-10 bg-linear-to-r from-blue-400 to-teal-600 text-white hover:from-blue-500 hover:to-teal-700 font-semibold transition-all disabled:opacity-60 shadow-md hover:shadow-lg"
+          className="w-full rounded-none h-10 color-primary text-white font-semibold transition-all disabled:opacity-60 shadow-md hover:shadow-lg"
         >
           Sign In
         </Button>

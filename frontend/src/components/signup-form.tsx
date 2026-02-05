@@ -17,7 +17,7 @@ import {
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import { toastSuccess } from "./custom-toasts";
+import { toastSuccess } from "../lib/custom-toasts";
 import { SignupSchema } from "@/zod-validation-schemas/signup-schema";
 
 export function SignupForm() {
@@ -43,7 +43,7 @@ export function SignupForm() {
   return (
     <Card className="border shadow-none w-full rounded-none">
       <CardHeader>
-        <CardTitle className="font-extrabold text-2xl bg-linear-to-r from-blue-400 to-teal-600 bg-clip-text text-transparent md:text-left text-center">
+        <CardTitle className="font-extrabold text-2xl color-primary bg-clip-text text-transparent md:text-left text-center">
           Account Signup
         </CardTitle>
         <CardDescription></CardDescription>
@@ -150,7 +150,7 @@ export function SignupForm() {
         <Button
           type="submit"
           form="signup-form"
-          className="w-full rounded-none h-10 bg-linear-to-r from-blue-400 to-teal-600 text-white hover:from-blue-500 hover:to-teal-700 font-semibold transition-all disabled:opacity-60 shadow-md hover:shadow-lg"
+          className="w-full rounded-none h-10 color-primary cursor-pointer text-white font-semibold transition-all disabled:opacity-60 shadow-md hover:shadow-lg"
         >
           Sign Up
         </Button>
@@ -169,7 +169,7 @@ export function SignupForm() {
         <Button
           type="button"
           variant="outline"
-          className="w-full rounded-none h-10 font-medium border-gray-300 hover:bg-gray-50 transition-colors"
+          className="w-full rounded-none h-10 font-medium cursor-pointer border-gray-300 hover:bg-gray-50 transition-colors"
           onClick={() => console.log("Create account clicked")}
         >
           Sign In
