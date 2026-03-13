@@ -13,7 +13,7 @@ This project explores **how to handle those problems incrementally**, starting w
 
 ##  Current Architecture (Phase 1)
 
-* **FastAPI** for async REST + WebSocket APIs
+* **Django** for REST + WebSocket APIs
 * **WebSockets** for real-time collaboration
 * **Redis** for caching, pub/sub, and distributed locks
 * **PostgreSQL** for persistent storage
@@ -22,7 +22,7 @@ This project explores **how to handle those problems incrementally**, starting w
 
 ##  Core Features (Implemented)
 
-* ✅ Async REST APIs with FastAPI
+* ✅ REST APIs with DRF
 * ✅ WebSocket-based real-time document updates
 * ✅ JWT-based authentication
 * ✅ Redis caching (read-heavy optimization)
@@ -76,7 +76,7 @@ WebSockets + Redis  →  Kafka (event backbone)
 
 | Category      | Technology |
 | ------------- | ---------- |
-| Backend       | FastAPI    |
+| Backend       | DRF        |
 | Real-Time     | WebSockets |
 | Database      | PostgreSQL |
 | Cache / Locks | Redis      |
@@ -88,7 +88,7 @@ WebSockets + Redis  →  Kafka (event backbone)
 ## Running Locally
 
 ```bash
-fastapi dev main.py
+python manage.py runserver
 ```
 
 
